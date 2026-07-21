@@ -120,35 +120,38 @@ document.addEventListener("keydown", e => {
 
 });
 // ======================================
-// Chapter 9 Special Song (Fixed - No overlap with background music)
+// Chapter 9 Special Song - FIXED
 // ======================================
 const musicBtn = document.getElementById("musicBtn");
-const bgMusic = document.getElementById("bgMusic");           // Background music
-const chapter9Song = document.getElementById("chapter9song"); // Special song
+const bgMusic = document.getElementById("bgMusic");
+const chapter9Song = document.getElementById("chapter9Song"); // Correct ID
 
 if (musicBtn && chapter9Song) {
     let isPlaying = false;
 
     musicBtn.addEventListener("click", () => {
         if (isPlaying) {
-            // Pause special song and resume background
+            // Pause special song
             chapter9Song.pause();
             if (bgMusic) bgMusic.play().catch(() => {});
             musicBtn.innerHTML = "▶ Play Song";
             musicBtn.style.background = "";
         } else {
-            // Pause background and play special song
+            // Pause background + play special song
             if (bgMusic) bgMusic.pause();
-            chapter9Song.play().catch(() => {});
+            chapter9Song.play().catch(err => {
+                console.error("Song playback failed:", err);
+                alert("Could not play song. Make sure Ammadu.mp3 is uploaded.");
+            });
             musicBtn.innerHTML = "⏸ Pause Song";
             musicBtn.style.background = "linear-gradient(45deg, #ff69b4, #ff1493)";
         }
         isPlaying = !isPlaying;
     });
 
-    // Auto stop special song when leaving Chapter 9 + resume background
+    // Auto-pause when leaving Chapter 9
     const chapters = document.querySelectorAll(".chapter");
-    const chapter9 = chapters[8];   // Chapter 9 (0-based index)
+    const chapter9 = chapters[8]; // Chapter 9 (0-based)
 
     if (chapter9) {
         const observer = new MutationObserver(() => {
@@ -164,6 +167,14 @@ if (musicBtn && chapter9Song) {
             attributeFilter: ["class"] 
         });
     }
+
+    // Bonus: Reset button when song ends
+    chapter9Song.addEventListener("ended", () => {
+        musicBtn.innerHTML = "▶ Play Song";
+        musicBtn.style.background = "";
+        isPlaying = false;
+        if (bgMusic) bgMusic.play().catch(() => {});
+    });
 }
 // ======================================
 // PREMIUM BIRTHDAY WEBSITE V3
