@@ -119,7 +119,7 @@ document.addEventListener("keydown", e => {
     }
 
 });
-// Chapter 9 Special Song (Separate song)
+// Chapter 9 Special Song (Separate from background music)
 const musicBtn = document.getElementById("musicBtn");
 const chapter9Song = document.getElementById("chapter9Song");
 
@@ -138,7 +138,7 @@ if (musicBtn && chapter9Song) {
         }
         isPlaying = !isPlaying;
     });
-}
+                }
 // ======================================
 // PREMIUM BIRTHDAY WEBSITE V3
 // PART 2
