@@ -119,29 +119,43 @@ document.addEventListener("keydown", e => {
     }
 
 });
-
-// Music Button
+// Chapter 9 Special Song (Separate from background music)
 const musicBtn = document.getElementById("musicBtn");
+const chapter9Song = document.getElementById("chapter9Song");
 
-if (musicBtn) {
+if (musicBtn && chapter9Song) {
+    let isPlaying = false;
 
     musicBtn.addEventListener("click", () => {
-
-        if (music.paused) {
-
-            music.play();
-            musicBtn.innerHTML = "⏸ Pause Music";
-
+        if (isPlaying) {
+            chapter9Song.pause();
+            musicBtn.innerHTML = "▶ Play Song";
+            musicBtn.style.background = "";
         } else {
-
-            music.pause();
-            musicBtn.innerHTML = "▶ Play Music";
-
+            chapter9Song.play().catch(() => {});
+            musicBtn.innerHTML = "⏸ Pause Song";
+            musicBtn.style.background = "linear-gradient(45deg, #ff69b4, #ff1493)";
         }
-
+        isPlaying = !isPlaying;
     });
 
-}
+    // Auto stop when leaving Chapter 9
+    const chapters = document.querySelectorAll(".chapter");
+    const chapter9 = chapters[8]; // Chapter 9 is the 9th chapter (index 8)
+
+    if (chapter9) {
+        const observer = new MutationObserver(() => {
+            if (!chapter9.classList.contains("active")) {
+                chapter9Song.pause();
+                musicBtn.innerHTML = "▶ Play Song";
+                isPlaying = false;
+            }
+        });
+        observer.observe(chapter9, { 
+            attributes: true, 
+            attributeFilter: ["class"] 
+        });
+    
 // ======================================
 // PREMIUM BIRTHDAY WEBSITE V3
 // PART 2
