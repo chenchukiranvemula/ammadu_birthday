@@ -119,26 +119,52 @@ document.addEventListener("keydown", e => {
     }
 
 });
-// Chapter 9 Special Song (Separate from background music)
+// ======================================
+// Chapter 9 Special Song (Fixed - No overlap with background music)
+// ======================================
 const musicBtn = document.getElementById("musicBtn");
-const chapter9Song = document.getElementById("chapter9Song");
+const bgMusic = document.getElementById("bgMusic");           // Background music
+const chapter9Song = document.getElementById("chapter9song"); // Special song
 
 if (musicBtn && chapter9Song) {
     let isPlaying = false;
 
     musicBtn.addEventListener("click", () => {
         if (isPlaying) {
+            // Pause special song and resume background
             chapter9Song.pause();
+            if (bgMusic) bgMusic.play().catch(() => {});
             musicBtn.innerHTML = "▶ Play Song";
             musicBtn.style.background = "";
         } else {
+            // Pause background and play special song
+            if (bgMusic) bgMusic.pause();
             chapter9Song.play().catch(() => {});
             musicBtn.innerHTML = "⏸ Pause Song";
             musicBtn.style.background = "linear-gradient(45deg, #ff69b4, #ff1493)";
         }
         isPlaying = !isPlaying;
     });
-                }
+
+    // Auto stop special song when leaving Chapter 9 + resume background
+    const chapters = document.querySelectorAll(".chapter");
+    const chapter9 = chapters[8];   // Chapter 9 (0-based index)
+
+    if (chapter9) {
+        const observer = new MutationObserver(() => {
+            if (!chapter9.classList.contains("active")) {
+                chapter9Song.pause();
+                if (bgMusic) bgMusic.play().catch(() => {});
+                musicBtn.innerHTML = "▶ Play Song";
+                isPlaying = false;
+            }
+        });
+        observer.observe(chapter9, { 
+            attributes: true, 
+            attributeFilter: ["class"] 
+        });
+    }
+}
 // ======================================
 // PREMIUM BIRTHDAY WEBSITE V3
 // PART 2
