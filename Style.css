@@ -14,11 +14,9 @@ html{
 }
 
 body{
-    background:linear-gradient(-45deg,#150020,#35004d,#59006d,#ff1493);
-    background-size:400% 400%;
-    animation:bgMove 15s ease infinite;
-    overflow:hidden;
-    color:#fff;
+    background: #0a001f;
+    overflow: hidden;
+    position: relative;
 }
 
 @keyframes bgMove{
@@ -500,3 +498,58 @@ button:hover{
         padding:8px 15px;
     }
 }
+/* ===================== NIGHT SKY & BOOK ===================== */
+.stars { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none; }
+
+.star {
+    position:absolute;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity:0.3; }
+    100% { opacity:1; }
+}
+
+.moon {
+    position:absolute;
+    top:12%; right:12%;
+    width:130px; height:130px;
+    background:#f8f8f8;
+    border-radius:50%;
+    box-shadow: 0 0 80px #ffee58, 0 0 160px rgba(255,220,80,0.5);
+    z-index:-1;
+}
+
+.shooting-star {
+    position:absolute;
+    height:2px; background:linear-gradient(90deg, transparent, white);
+    box-shadow:0 0 12px white;
+    animation:shoot 2.5s linear forwards;
+}
+
+@keyframes shoot {
+    to { transform:translate(300px, 300px); opacity:0; }
+}
+
+/* 3D Book */
+.book-container { perspective: 1500px; }
+.book {
+    width: 340px; height: 440px;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+.book-cover {
+    position:relative; width:100%; height:100%;
+    background: linear-gradient(#3c2a1e, #5d4037);
+    border-radius:12px;
+    box-shadow: 25px 25px 50px rgba(0,0,0,0.7);
+    overflow:hidden;
+}
+.spiral {
+    position:absolute; left:28px; top:0; bottom:0;
+    width:18px;
+    background: repeating-linear-gradient(45deg, #ddd 0px, #ddd 10px, #444 10px, #444 18px);
+       }
