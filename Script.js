@@ -467,8 +467,10 @@ if (letter) {
 
 }
 // ===================== PASSWORD SYSTEM =====================
-const correctPassword = "03062025"; // ← CHANGE THIS to her actual DDMMYYYY
+const correctPassword = "03062025";   // ←←← CHANGE THIS LINE
 
+const passwordScreen = document.getElementById("passwordScreen");
+...
 const passwordScreen = document.getElementById("passwordScreen");
 const unlockBtn = document.getElementById("unlockBtn");
 const passwordInput = document.getElementById("passwordInput");
