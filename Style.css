@@ -796,24 +796,57 @@ top:120px;
 transform:translateX(-50%);
 
    }
+/* Moon */
 .proposalScene .moon{
-position:absolute;
-right:70px;
-top:40px;
-width:120px;
-height:120px;
-background:#fff8c6;
-border-radius:50%;
-box-shadow:0 0 50px #fff8c6;
+    position:absolute;
+    top:40px;
+    right:60px;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:#fff9c4;
+    box-shadow:0 0 40px #fff9c4,0 0 80px rgba(255,249,196,.6);
 }
-.proposalScene .stars{
-position:absolute;
-inset:0;
-background-image:
-radial-gradient(white 1px,transparent 1px),
-radial-gradient(white 1px,transparent 1px);
 
-background-size:90px 90px;
+/* Stars */
+.proposalScene::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+    background-size:80px 80px,120px 120px;
+    background-position:0 0,40px 40px;
+    opacity:.8;
+}
 
-opacity:.8;
+/* Clouds */
+.proposalScene::after{
+    content:"☁ ☁ ☁";
+    position:absolute;
+    top:50px;
+    left:-250px;
+    font-size:45px;
+    color:rgba(255,255,255,.6);
+    animation:cloudMove 30s linear infinite;
+}
+
+@keyframes cloudMove{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(1300px);
+    }
+}
+
+/* Heart animation */
+#heart{
+    transition:1s;
+}
+
+#heart.show{
+    opacity:1;
+    transform:translateX(-50%) scale(1.4);
 }
