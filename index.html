@@ -1,122 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Madhu Priya ❤️</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="Style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Madhu Priya ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-    <!-- Background Audio -->
-    <audio id="bgMusic" loop>
-        <source src="Birthdaysong.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="chapter9Song" preload="auto">
-        <source src="Ammadu2.mp3" type="audio/mpeg">
-    </audio>
 
-    <!-- ==================== NEW PASSWORD SCREEN ==================== -->
-    <section id="passwordScreen" style="display:flex;">
-        <div class="birthday-background">
+<!-- Background Music -->
 
-    <div class="bgTitle">BIRTHDAY</div>
+<audio id="bgMusic" loop>
+<source src="Birthdaysong.mp3" type="audio/mpeg">
+</audio>
 
-    <span>Madhu Priya</span>
-    <span>Ammadu ❤️</span>
-    <span>KODIGUDDU</span>
-    <span>CHIMPANZEE</span>
-    <span>modhu</span>
 
-            </div>
-            
-            <!-- Left Side: 3D Book -->
-            <div class="book-container">
-                <div class="book">
-                    <div class="book-cover">
-                        <img src="ghibli-photo.jpg" alt="Ghibli Art Memory">
-                        <div class="spiral"></div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Right Side: Password -->
-            <div class="password-box">
-                <h1>🔐 Unlock The Story</h1>
-                <p>Enter the password </p>
-                <input
-type="password"
-id="passwordInput"
-placeholder="••••••••"
-maxlength="8">
-                <button id="unlockBtn">Open the story ❤️</button>
-                <p id="errorMsg"></p>
-            <div id="roseHint">
+<!-- ================= BOOK ================= -->
 
-<div class="rose">
-🌹
+<div class="bookScene">
+
+
+<div class="book">
+
+
+<!-- ================= COVER ================= -->
+
+<div class="bookCover" id="cover">
+
+<h1>
+Happy Birthday
+</h1>
+
+<h2>
+Madhu Priya ❤️
+</h2>
+
+<button id="openBook">
+Open Our Story 📖
+</button>
+
 </div>
 
-<div class="hintBox">
 
-Hint ❤️
 
-<br><br>
+<!-- ================= PASSWORD PAGE ================= -->
+
+
+<div class="page passwordPage" id="passwordScreen">
+
+
+<div class="leftPage">
+
+<img src="ghibli-photo.jpg">
+
+<p>
+Every memory belongs to you ❤️
+</p>
+
+</div>
+
+
+
+<div class="rightPage">
+
+
+<h1>
+🔐 Unlock The Story
+</h1>
+
+
+<p>
+Enter the password
+</p>
+
+
+<input 
+type="password"
+id="passwordInput"
+placeholder="Enter Password">
+
+
+<button id="unlockBtn">
+Open Story ❤️
+</button>
+
+
+<p id="errorMsg"></p>
+
+
+<div id="roseHint">
+
+🌹
+
+<br>
+
+Hint:
+<br>
 
 Our First Kiss Day
 
 </div>
 
-            </div>
-                
-        </div>
-    
-</section>
 
-<!-- Loading Screen -->
-<section id="loadingScreen">
+</div>
 
-    <div class="loadingBook">
 
-        <h1>📖 Opening Our Story</h1>
+</div>
 
-        <p id="loadingText">
-            Every memory has a heartbeat...
-        </p>
 
-        <div class="loadingBar">
-            <div id="loadingFill"></div>
-        </div>
 
-    </div>
 
-</section>
 
-<!-- Welcome Screen -->
-<section id="welcome">
+<!-- ================= LOADING PAGE ================= -->
 
-        <div class="welcome-box">
-            <h1>🎂 Happy 17th Birthday</h1>
-            <h2>Madhu Priya ❤️</h2>
-            <p>Today isn't just another day...<br>It's the day the most beautiful girl came into this world.</p>
-            <button id="startBtn">Start The little  Journey ❤️</button>
-        </div>
-    </section>
 
-    <!-- Main Website -->
+<div class="page loadingPage" id="loadingScreen">
+
+
+<h1>
+Opening Our Story 📖
+</h1>
+
+
+<p id="loadingText">
+Preparing memories...
+</p>
+
+
+<div class="loadingBar">
+
+<div id="loadingFill"></div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- ================= WELCOME PAGE ================= -->
+
+
+<div class="page welcomePage" id="welcome">
+
+
+<h1>
+🎂 Happy 17th Birthday
+</h1>
+
+
+<h2>
+Madhu Priya ❤️
+</h2>
+
+
+<p>
+
+Today isn't just another day...
+
+<br>
+
+It's the day the most beautiful girl came into this world.
+
+</p>
+
+
+<button id="startBtn">
+
+Start Our Journey ❤️
+
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- ================= CHAPTERS ================= -->
+
 
 <div id="website">
 
-    <div class="bookWrapper">
 
-        <div class="bookShadow"></div>
+<div id="progress"></div>
 
-        <div class="bookBody">
 <!-- Chapter 1 -->
 
 <section class="chapter">
@@ -223,7 +303,6 @@ Next ➜
 </button>
 
 </section>
-
 <!-- Chapter 4 -->
 
 <section class="chapter">
@@ -331,9 +410,8 @@ Next ➜
 Next ➜
 </button>
     
-</section>
-
-<!-- Chapter 7 -->
+    </section>
+    <!-- Chapter 7 -->
 
 <section class="chapter">
 
@@ -442,9 +520,8 @@ Next ➜
 
     </div>
 
-</section>
-
-<!-- Chapter 10 -->
+    </section>
+    <!-- Chapter 10 -->
 
 <section class="chapter">
 
@@ -553,13 +630,55 @@ Replay Journey 🔄
 
 </section>
 
-       </div>
-        
-    </div>
-    
+
+
+
+
 </div>
 
-<script src="Script.js"></script>
-    
+
+
+
+
+
+<!-- ================= FINAL PAGE ================= -->
+
+
+<div class="page finalPage" id="finalPage">
+
+
+<h1>
+I LOVE YOU
+</h1>
+
+
+<h2>
+KODIGUDDU ❤️
+</h2>
+
+
+<button id="restart">
+
+Replay Our Story 🔄
+
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
 </body>
-</html>
+
+    </html>
