@@ -466,3 +466,62 @@ if (letter) {
     }
 
 }
+// ===================== PASSWORD SYSTEM =====================
+const correctPassword = "03062025"; // ← CHANGE THIS to her actual DDMMYYYY
+
+const passwordScreen = document.getElementById("passwordScreen");
+const unlockBtn = document.getElementById("unlockBtn");
+const passwordInput = document.getElementById("passwordInput");
+const errorMsg = document.getElementById("errorMsg");
+
+if (unlockBtn) {
+    unlockBtn.addEventListener("click", () => {
+        if (passwordInput.value === correctPassword) {
+            passwordScreen.style.transition = "opacity 0.8s";
+            passwordScreen.style.opacity = "0";
+            setTimeout(() => {
+                passwordScreen.style.display = "none";
+                document.getElementById("welcome").style.display = "flex";
+            }, 800);
+        } else {
+            errorMsg.textContent = "Wrong date... Try again my love ❤️";
+            passwordInput.value = "";
+        }
+    });
+}
+// ===================== NIGHT ANIMATION =====================
+function createStars() {
+    const container = document.createElement("div");
+    container.className = "stars";
+    document.body.appendChild(container);
+
+    for (let i = 0; i < 280; i++) {
+        const star = document.createElement("div");
+        star.className = "star";
+        star.style.width = star.style.height = Math.random() * 3 + 1 + "px";
+        star.style.left = Math.random() * 100 + "vw";
+        star.style.top = Math.random() * 85 + "vh";
+        star.style.animationDelay = Math.random() * 3 + "s";
+        container.appendChild(star);
+    }
+
+    // Moon
+    const moon = document.createElement("div");
+    moon.className = "moon";
+    document.body.appendChild(moon);
+}
+
+function createShootingStar() {
+    const s = document.createElement("div");
+    s.className = "shooting-star";
+    s.style.left = Math.random() * 70 + "vw";
+    s.style.top = Math.random() * 50 + "vh";
+    s.style.width = Math.random() * 80 + 60 + "px";
+    document.body.appendChild(s);
+    setTimeout(() => s.remove(), 3000);
+}
+
+setInterval(createShootingStar, 1600);
+
+// Initialize everything
+createStars();
