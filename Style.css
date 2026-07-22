@@ -776,7 +776,7 @@ transform:scale(1);
 
     letter-spacing:12px;
 
-    color:#000000;
+    color:#111;
 
     opacity:0.12;
 
@@ -804,3 +804,25 @@ transform:scale(1);
 #passwordInput::placeholder {
     color:#555555 !important;
    }
+#chapter9{
+    color:white;
+}
+
+.proposalScene{
+    box-shadow:none !important;
+}.chapter{
+    transform-origin:left center;
+    animation:pageOpen .8s ease;
+}
+
+@keyframes pageOpen{
+    from{
+        opacity:0;
+        transform:perspective(1200px) rotateY(-90deg);
+    }
+
+    to{
+        opacity:1;
+        transform:perspective(1200px) rotateY(0deg);
+    }
+}
