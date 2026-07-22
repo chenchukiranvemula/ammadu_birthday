@@ -477,37 +477,33 @@ const errorMsg = document.getElementById("errorMsg");
 if (unlockBtn) {
     unlockBtn.addEventListener("click", () => {
         if (passwordInput.value === correctPassword) {
-            passwordScreen.style.transition = "opacity 0.8s";
-            passwordScreen.style.opacity = "0";
-            setTimeout(() => {
-                passwordScreen.style.display = "none";
-                document.getElementById("welcome").style.display = "flex";
-            }, 800);
-        else{
 
-errorMsg.innerHTML="Wrong Password ❤️";
+    passwordScreen.style.transition = "opacity 0.8s";
+    passwordScreen.style.opacity = "0";
 
-document.getElementById("roseHint").style.display="block";
+    setTimeout(() => {
+        passwordScreen.style.display = "none";
+        document.getElementById("welcome").style.display = "flex";
+    },800);
 
-passwordInput.value="";
+} else {
 
-const box=document.querySelector(".password-box");
+    errorMsg.innerHTML="Wrong Password ❤️";
 
-box.animate([
+    document.getElementById("roseHint").style.display="block";
 
-{transform:"translateX(-12px)"},
+    passwordInput.value="";
 
-{transform:"translateX(12px)"},
+    const box=document.querySelector(".password-box");
 
-{transform:"translateX(-12px)"},
-
-{transform:"translateX(0)"}
-
-],{
-
-duration:500
-
-});
+    box.animate([
+        {transform:"translateX(-12px)"},
+        {transform:"translateX(12px)"},
+        {transform:"translateX(-12px)"},
+        {transform:"translateX(0)"}
+    ],{
+        duration:500
+    });
 
         }
 // ===================== NIGHT ANIMATION =====================
