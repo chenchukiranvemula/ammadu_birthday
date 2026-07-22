@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<link rel="Stylesheet" href="Stylr.css">
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Happy Birthday Madhu Priya ❤️</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<link rel="Stylesheet" href="Style.css">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Madhu Priya ❤️</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Style.css">
 </head>
-
 <body>
 
-<!-- Floating Hearts -->
-<div id="hearts"></div>
+    <!-- Background Audio -->
+    <audio id="bgMusic" loop>
+        <source src="Birthdaysong.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="chapter9Song" preload="auto">
+        <source src="Ammadu2.mp3" type="audio/mpeg">
+    </audio>
 
-<!-- Background Music -->
-<audio id="bgMusic" loop>
-    <source src="Birthdaysong.mp3" type="audio/mpeg">
-</audio>
+    <!-- ==================== NEW PASSWORD SCREEN ==================== -->
+    <section id="passwordScreen">
+        <div class="night-container">
+            
+            <!-- Left Side: 3D Book -->
+            <div class="book-container">
+                <div class="book">
+                    <div class="book-cover">
+                        <img src="ghibli-photo.jpg" alt="Ghibli Art Memory">
+                        <div class="spiral"></div>
+                    </div>
+                </div>
+            </div>
 
-<!-- Chapter 9 Special Song -->
-<audio id="chapter9Song" preload="auto">
-    <source src="Ammadu2.mp3" type="audio/mpeg">
-</audio>
+            <!-- Right Side: Password -->
+            <div class="password-box">
+                <h1>🔐 Unlock Our Story</h1>
+                <p>Enter her birthday (DDMMYYYY)</p>
+                <input type="text" id="passwordInput" placeholder="17072009" maxlength="8">
+                <button id="unlockBtn">Open the Book ❤️</button>
+                <p id="errorMsg"></p>
+            </div>
+        </div>
+    </section>
 
-<!-- Welcome Screen -->
+    <!-- ==================== ORIGINAL CONTENT STARTS HERE ==================== -->
+    <!-- Welcome Screen -->
+    <section id="welcome" style="display: none;">
+        <div class="welcome-box">
+            <h1>🎂 Happy 17th Birthday</h1>
+            <h2>Madhu Priya ❤️</h2>
+            <p>Today isn't just another day...<br>It's the day the most beautiful girl came into this world.</p>
+            <button id="startBtn">Start Our Journey ❤️</button>
+        </div>
+    </section>
 
-<section id="welcome">
-
-<div class="welcome-box">
-
-<h1>🎂 Happy 17th Birthday</h1>
-
-<h2>Madhu Priya ❤️</h2>
-
-<p>
-
-Today isn't just another day...
-
-It's the day the most beautiful girl came into this world.
-
-</p>
-
-<button id="startBtn">
-
-Start Our Journey ❤️
-
-</button>
-
-</div>
-
-</section>
-
-<!-- Main Website -->
+    <!-- Main Website -->
 
 <div id="website">
 
@@ -126,8 +123,7 @@ Next ➜
 </button>
 
 </section>
-
-<!-- Chapter 3 -->
+    <!-- Chapter 3 -->
 
 <section class="chapter">
 
@@ -228,8 +224,7 @@ Next ➜
 </button>
 
 </section>
-
-<!-- Chapter 6 -->
+    <!-- Chapter 6 -->
 
 <section class="chapter">
 
@@ -341,8 +336,8 @@ Next ➜
 
 </button>
 
-</section>
-<!-- Chapter 9 -->
+    </section>
+    <!-- Chapter 9 -->
 
 <section class="chapter">
 
@@ -435,9 +430,6 @@ Next ➜
 </button>
 
 </section>
-
-<!-- Chapter 12 -->
-
 <section class="chapter">
 
 <h1>❤️ The End ❤️</h1>
@@ -483,7 +475,5 @@ Replay Journey 🔄
 </div>
 
 <script src="Script.js"></script>
-
 </body>
-
 </html>
