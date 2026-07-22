@@ -184,7 +184,7 @@ button:hover{
     border-radius:20px;
     background:rgba(255,255,255,.08);
     backdrop-filter:blur(15px);
-    box-shadow:0 0 20px rgba(255,20,147,.25);
+    box-shadow:0 0 20px rgba(255,255,255,.08);
     transition:.4s;
     cursor:pointer;
 }
@@ -743,3 +743,11 @@ transform:scale(1);
     line-height:1.8;
     text-shadow:0 0 10px black;
 }
+.card,
+.card h3,
+.card p,
+.timeBox,
+.timeBox h3,
+.timeBox p{
+    color:#ffffff !important;
+   }
