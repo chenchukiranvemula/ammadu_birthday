@@ -495,7 +495,7 @@ if (unlockBtn) {
     box.style.transform = "translateX(10px)";
     setTimeout(() => box.style.transform = "translateX(-10px)", 100);
     setTimeout(() => box.style.transform = "translateX(0)", 300);
-        }
+        })
 // ===================== NIGHT ANIMATION =====================
 function createStars() {
     const container = document.createElement("div");
