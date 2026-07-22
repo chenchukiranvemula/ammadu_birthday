@@ -150,7 +150,7 @@ if (musicBtn && chapter9Song) {
     });
 
     // Auto-pause when leaving Chapter 9
-    const chapters = document.querySelectorAll(".chapter");
+    
     const chapter9 = chapters[8]; // Chapter 9 (0-based)
 
     if (chapter9) {
@@ -470,7 +470,6 @@ if (letter) {
 const correctPassword = "03062025";   // ←←← CHANGE THIS LINE
 
 const passwordScreen = document.getElementById("passwordScreen");
-const passwordScreen = document.getElementById("passwordScreen");
 const unlockBtn = document.getElementById("unlockBtn");
 const passwordInput = document.getElementById("passwordInput");
 const errorMsg = document.getElementById("errorMsg");
@@ -495,7 +494,9 @@ if (unlockBtn) {
     box.style.transform = "translateX(10px)";
     setTimeout(() => box.style.transform = "translateX(-10px)", 100);
     setTimeout(() => box.style.transform = "translateX(0)", 300);
-        })
+        }
+    });
+}
 // ===================== NIGHT ANIMATION =====================
 function createStars() {
     const container = document.createElement("div");
