@@ -81,7 +81,20 @@ body{
 
     overflow:hidden;
 
-    z-index:5;
+    z-index:1;
+
+}
+.passwordPage{
+    position:relative;
+    z-index:10;
+}
+.book.open .book-cover{
+
+    transform:rotateY(-160deg);
+
+    transform-origin:left;
+
+    transition:2s;
 
 }
 
