@@ -4,11 +4,17 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Happy Birthday Madhu Priya ❤️</title>
 
-<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="Style.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -16,61 +22,90 @@
 <body>
 
 
-<!-- Background Music -->
+<!-- ==========================
+     MUSIC
+========================== -->
 
 <audio id="bgMusic" loop>
+
 <source src="Birthdaysong.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<audio id="chapter9Song">
+
+<source src="Ammadu2.mp3" type="audio/mpeg">
+
 </audio>
 
 
 
-<!-- ================= BOOK ================= -->
 
-<div class="bookScene">
+
+<!-- ==========================
+     BOOK CONTAINER
+========================== -->
 
 
 <div class="book">
 
 
-<!-- ================= COVER ================= -->
 
-<div class="bookCover" id="cover">
+<!-- BOOK COVER -->
 
-<h1>
-Happy Birthday
-</h1>
+<div class="book-cover">
 
-<h2>
-Madhu Priya ❤️
-</h2>
 
-<button id="openBook">
-Open Our Story 📖
-</button>
+<img src="ghibli-photo.jpg"
+alt="Memory Photo">
+
+
+<div class="cover-title">
+
+Happy Birthday ❤️
+
+</div>
+
 
 </div>
 
 
 
-<!-- ================= PASSWORD PAGE ================= -->
 
 
-<div class="page passwordPage" id="passwordScreen">
+<!-- ==========================
+     PASSWORD SCREEN
+========================== -->
 
+
+<section id="passwordScreen"
+class="passwordPage">
+
+
+
+<!-- LEFT PAGE -->
 
 <div class="leftPage">
 
-<img src="ghibli-photo.jpg">
 
-<p>
-Every memory belongs to you ❤️
-</p>
+<img src="ghibli-photo.jpg"
+class="memoryImage">
+
 
 </div>
 
 
 
+
+
+<!-- RIGHT PAGE -->
+
 <div class="rightPage">
+
+
+
+<div class="password-box">
 
 
 <h1>
@@ -79,60 +114,72 @@ Every memory belongs to you ❤️
 
 
 <p>
-Enter the password
+A special book made for you ❤️
 </p>
 
 
-<input 
+
+<input
 type="password"
 id="passwordInput"
 placeholder="Enter Password">
 
 
+
 <button id="unlockBtn">
-Open Story ❤️
+
+Open The Book ❤️
+
 </button>
+
 
 
 <p id="errorMsg"></p>
 
 
+
 <div id="roseHint">
 
-🌹
-
+🌹 Hint:
 <br>
-
-Hint:
-<br>
-
 Our First Kiss Day
 
 </div>
 
 
-</div>
-
 
 </div>
 
 
+</div>
 
 
 
-<!-- ================= LOADING PAGE ================= -->
+</section>
 
 
-<div class="page loadingPage" id="loadingScreen">
+
+
+
+
+<!-- ==========================
+     LOADING SCREEN
+========================== -->
+
+
+<section id="loadingScreen"
+class="loadingPage">
 
 
 <h1>
-Opening Our Story 📖
+Opening Your Story ❤️
 </h1>
 
 
 <p id="loadingText">
+
 Preparing memories...
+
 </p>
 
 
@@ -143,490 +190,555 @@ Preparing memories...
 </div>
 
 
-</div>
+
+    </section>
+    <!-- ==========================
+     WELCOME PAGE
+========================== -->
+
+
+<section id="welcome"
+class="welcomePage">
 
 
 
-
-
-<!-- ================= WELCOME PAGE ================= -->
-
-
-<div class="page welcomePage" id="welcome">
+<div class="welcome-box">
 
 
 <h1>
+
 🎂 Happy 17th Birthday
+
 </h1>
 
 
+
 <h2>
+
 Madhu Priya ❤️
+
 </h2>
+
 
 
 <p>
 
-Today isn't just another day...
+Today isn't just another day...<br>
 
-<br>
-
-It's the day the most beautiful girl came into this world.
+It's the day a beautiful soul came into this world.
 
 </p>
 
 
+
+
 <button id="startBtn">
 
-Start Our Journey ❤️
+Start The Little Journey ❤️
 
 </button>
+
 
 
 </div>
 
 
+</section>
 
 
 
-<!-- ================= CHAPTERS ================= -->
+
+
+
+<!-- ==========================
+     MAIN WEBSITE
+========================== -->
 
 
 <div id="website">
 
 
-<div id="progress"></div>
 
-<!-- Chapter 1 -->
+<div id="progress">
 
-<section class="chapter">
+Chapter 1 / 12
 
-<h1>🌸 Chapter 1</h1>
+</div>
 
-<h2>Welcome My Love ❤️</h2>
+
+
+
+
+<!-- ==========================
+     CHAPTER CONTAINER
+========================== -->
+
+
+<div id="chapterBook">
+
+
+
+<!-- ==========================
+     CHAPTER 1
+========================== -->
+
+<section class="chapter" id="chapter1">
+
+
+<div class="page-content">
+
+
+<h1>
+Chapter 1 ❤️
+</h1>
+
 
 <p>
-
-Every second with you is precious.
-
-Today is all about celebrating YOU.
-
-Happy Birthday Princess ❤️
-
+Your Chapter 1 content goes here...
 </p>
 
+
+
 <button class="nextBtn">
-
-Next ➜
-
+Turn Page →
 </button>
+
+
+</div>
+
 
 </section>
-<!-- Chapter 2 -->
 
-<section class="chapter">
 
-<h1>💕 Chapter 2</h1>
 
-<h2>Reasons I Love You ❤️</h2>
 
-<div class="cards">
 
-<div class="card">
-🥰<br><br>
-Your Beautiful Smile
-</div>
+<!-- ==========================
+     CHAPTER 2
+========================== -->
 
-<div class="card">
-🌸<br><br>
-Your Caring Nature
-</div>
+<section class="chapter" id="chapter2">
 
-<div class="card">
-💖<br><br>
-Your Kind Heart
-</div>
 
-<div class="card">
-😍<br><br>
-Everything About You
-</div>
+<div class="page-content">
 
-</div>
-    
-<button class="prevBtn">
-⬅ Previous
-</button>
 
-<button class="nextBtn">
-Next ➜
-</button>
+<h1>
+Chapter 2 ❤️
+</h1>
 
-</section>
-    <!-- Chapter 3 -->
-
-<section class="chapter">
-
-<h1>🌹 Chapter 3</h1>
-
-<h2>Our Journey ❤️</h2>
-
-<div class="timeline">
-
-<div class="timeBox">
-🌸
-<p>The day we met became one of my favorite memories.</p>
-</div>
-
-<div class="timeBox">
-💖
-<p>Every conversation brought us closer.</p>
-</div>
-
-<div class="timeBox">
-🥰
-<p>You became my happiness every single day.</p>
-</div>
-
-<div class="timeBox">
-❤️
-<p>Today I just want to see you smiling.</p>
-</div>
-
-</div>
-<button class="prevBtn">
-⬅ Previous
-</button>
-
-<button class="nextBtn">
-Next ➜
-</button>
-
-</section>
-<!-- Chapter 4 -->
-
-<section class="chapter">
-
-<h1>🎁 Chapter 4</h1>
-
-<h2>Tap the Gifts ❤️</h2>
-
-<div class="giftContainer">
-
-<div class="gift" data-message="You're the best gift in my life ❤️">
-🎁
-</div>
-
-<div class="gift" data-message="May all your dreams come true 🌸">
-🎁
-</div>
-
-<div class="gift" data-message="I Love You Forever ❤️">
-🎁
-</div>
-
-</div>
-
-<p id="giftMessage"></p>
-
-<button class="prevBtn">
-⬅ Previous
-</button>
-
-<button class="nextBtn">
-Next ➜
-</button>
-
-</section>
-<!-- Chapter 5 -->
-
-<section class="chapter">
-
-<h1>📸 Chapter 5</h1>
-
-<h2> Small cute  Memories for me ❤️</h2>
-
-<div class="gallery">
-
-<div class="photo">
-<img src="Madhu1.jpg" alt="Memory 1">
-<p>❤️ You are my heart.</p>
-</div>
-
-<div class="photo">
-<img src="Madhu2.jpg" alt="Memory 2">
-<p>😊 Your smile makes my day brighter.</p>
-</div>
-
-<div class="photo">
-<img src="Madhu3.jpg" alt="Memory 3">
-<p>💖 You are my favorite.</p>
-</div>
-
-</div>
-
-    <button class="prevBtn">
-⬅ Previous
-</button>
-
-<button class="nextBtn">
-Next ➜
-</button>
-
-</section>
-    <!-- Chapter 6 -->
-
-<section class="chapter">
-
-<h1>💖 Chapter 6</h1>
-
-<h2>My Promises To You</h2>
-
-<div class="cards">
-
-<div class="card">
-❤️ I'll always respect you.
-</div>
-
-<div class="card">
-🌹 I'll always support your dreams.
-</div>
-
-<div class="card">
-🥰 I'll always make you smile.
-</div>
-
-<div class="card">
-♾️ I'll always love you.
-</div>
-
-</div>
-
-    <button class="prevBtn">
-⬅ Previous
-</button>
-
-<button class="nextBtn">
-Next ➜
-</button>
-    
-    </section>
-    <!-- Chapter 7 -->
-
-<section class="chapter">
-
-<h1>🎂 Chapter 7</h1>
-
-<h2>Make A Birthday Wish ❤️</h2>
-
-<div class="cake" id="cake">
-
-🎂
-
-</div>
 
 <p>
-Close your eyes...
-Make a beautiful wish...
-May every dream of yours come true. ✨
+Your Chapter 2 content goes here...
 </p>
 
-<button id="cakeBtn">
 
-Blow Candles 🕯️
-</button>
-    
+
 <button class="prevBtn">
-⬅ Previous
+← Previous
 </button>
+
 
 <button class="nextBtn">
-Next ➜
+Turn Page →
 </button>
 
-</section>
-
-<!-- Chapter 8 -->
-
-<section class="chapter">
-
-<h1>💌 Chapter 8</h1>
-
-<h2>My Letter To You ❤️</h2>
-
-<div class="letter">
-
-<h3>My Dearest Madhu Priya ❤️</h3>
-
-<p id="letterText">
-
-Happy Birthday, my love.
-
-Today is one of the most beautiful days because it's the day someone truly special came into this world.
-
-I don't always know the perfect words to express how much you mean to me, but I hope this little surprise shows even a small part of what is in my heart.
-
-Your smile has a way of making everything feel brighter. Your kindness, your laughter, and the way you are simply yourself are the reasons you are so special to me.
-
-Thank you for being such a wonderful person. I hope this year brings you endless happiness, success, good health, unforgettable memories, and countless reasons to smile.
-
-May every dream you have come true, and may your heart always stay as beautiful as it is today.
-
-No matter where life takes us, I will always wish the very best for you.
-
-Happy Birthday once again, Madhu Priya.
-
-Keep smiling, keep shining, and never stop being the amazing person you are.
-
-❤️ Forever Yours ❤️
-    Hubby..🤗
-
-</p>
 
 </div>
 
+
+</section>
+
+
+
+
+
+
+<!-- ==========================
+     CHAPTER 3
+========================== -->
+
+<section class="chapter" id="chapter3">
+
+
+<div class="page-content">
+
+
+<h1>
+Chapter 3 ❤️
+</h1>
+
+
+<p>
+Your Chapter 3 content goes here...
+</p>
+
+
+
 <button class="prevBtn">
-⬅ Previous
+← Previous
 </button>
+
 
 <button class="nextBtn">
-Next ➜
+Turn Page →
 </button>
 
-    </section>
-    <!-- Chapter 9 -->
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ==========================
+     CHAPTER 4
+========================== -->
+
+<section class="chapter" id="chapter4">
+
+
+<div class="page-content">
+
+
+<h1>
+Chapter 4 ❤️
+</h1>
+
+
+<p>
+Your Chapter 4 content goes here...
+</p>
+
+
+
+<button class="prevBtn">
+← Previous
+</button>
+
+
+<button class="nextBtn">
+Turn Page →
+</button>
+
+
+</div>
+
+
+</section>
+    <!-- ==========================
+     CHAPTER 5
+========================== -->
+
+<section class="chapter" id="chapter5">
+
+
+<div class="page-content">
+
+
+<h1>
+Chapter 5 ❤️
+</h1>
+
+
+<p>
+Your Chapter 5 content goes here...
+</p>
+
+
+
+<button class="prevBtn">
+← Previous
+</button>
+
+
+<button class="nextBtn">
+Turn Page →
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ==========================
+     CHAPTER 6
+========================== -->
+
+
+<section class="chapter" id="chapter6">
+
+
+<div class="page-content">
+
+
+<h1>
+Chapter 6 ❤️
+</h1>
+
+
+<p>
+Your Chapter 6 content goes here...
+</p>
+
+
+
+<button class="prevBtn">
+← Previous
+</button>
+
+
+<button class="nextBtn">
+Turn Page →
+</button>
+
+
+<!-- ==========================
+     CHAPTER 9
+========================== -->
 
 <section class="chapter" id="chapter9">
 
-    <div class="chapter9-overlay">
 
-        <h1>🌙 Chapter 9</h1>
+<div class="page-content">
 
-        <h2>Our Forever Moment ❤️</h2>
 
-        <p>
-            No matter where life takes us,
-            my heart will always find its way to you.
-            Thank you for being the most beautiful part of my life.
-            ❤️
-        </p>
+<h1>
+Chapter 9 ❤️
+</h1>
 
-        <button id="musicBtn">▶ Play Song</button>
-
-        <div class="navButtons">
-            <button class="prevBtn">⬅ Previous</button>
-            <button class="nextBtn">Next ➜</button>
-        </div>
-
-    </div>
-
-    </section>
-    <!-- Chapter 10 -->
-
-<section class="chapter">
-
-<h1>🎆 Chapter 10</h1>
-
-<h2>It's Celebration Time ❤️</h2>
-
-<h3>
-
-🎈🎈 HAPPY 17TH BIRTHDAY 🎈🎈
-
-</h3>
 
 <p>
-
-May your smile shine brighter than the stars.
-
-May every wish come true.
-
-May happiness always stay with you.
-
+Your Chapter 9 content goes here...
 </p>
 
-<div id="fireworks"></div>
+
+<button id="musicBtn">
+
+▶ Play Song
+
+</button>
+
+
+
+<br><br>
+
 
 <button class="prevBtn">
-⬅ Previous
+← Previous
 </button>
 
+
 <button class="nextBtn">
-Next ➜
+Turn Page →
 </button>
+
+
+</div>
+
 
 </section>
 
-<!-- Chapter 11 -->
 
-<section class="chapter">
 
-<h1>👑 Chapter 11</h1>
 
-<h2>Always My Princess ❤️</h2>
+
+
+
+<!-- ==========================
+     CHAPTER 10
+========================== -->
+
+
+<section class="chapter" id="chapter10">
+
+
+<div class="page-content">
+
+
+<h1>
+Chapter 10 ❤️
+</h1>
+
+
+<p>
+Your Chapter 10 content goes here...
+</p>
+
+
+
+<button class="prevBtn">
+← Previous
+</button>
+
+
+<button class="nextBtn">
+Turn Page →
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ==========================
+     CHAPTER 11
+========================== -->
+
+
+<section class="chapter" id="chapter11">
+
+
+<div class="page-content">
+
+
+<h1>
+Chapter 11 ❤️
+</h1>
+
+
+<p>
+Your Chapter 11 content goes here...
+</p>
+
+
+
+<button class="prevBtn">
+← Previous
+</button>
+
+
+<button class="nextBtn">
+Turn Page →
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ==========================
+     CHAPTER 12
+========================== -->
+
+
+<section class="chapter" id="chapter12">
+
+
+<div class="page-content">
+
+
+<h1>
+Chapter 12 ❤️
+</h1>
+
+
+<p>
+The final chapter of our story...
+</p>
+
+
+
+<button class="prevBtn">
+← Previous
+</button>
+
+
+<button id="finishBtn">
+Close The Book ❤️
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+</div>
+
+
+
+    </div>
+    <!-- ==========================
+     FINAL CLOSING PAGE
+========================== -->
+
+
+<section id="finalPage"
+class="finalPage">
+
+
+
+<div class="final-book-page">
+
+
+
+<h1 id="finalMessage">
+
+I LOVE YOU KODIGUDDU ❤️
+
+</h1>
+
+
 
 <p>
 
-You are one of the most beautiful parts of my life.
+Thank you for being the most special part of my life.
 
-Thank you for every smile, every laugh, and every wonderful memory.
+</p>
 
-No matter how many birthdays pass, I'll always wish the best for you.
 
-Never stop smiling because your smile makes the world brighter.
+
+
+<div class="closing-heart">
 
 ❤️
 
-</p>
+</div>
 
-<button class="prevBtn">
-⬅ Previous
-</button>
 
-<button class="nextBtn">
-Next ➜
-</button>
 
-</section>
-<section class="chapter">
-
-<h1>❤️ The End ❤️</h1>
-
-<h2>Forever & Always</h2>
-
-<h1>
-
-Happy Birthday Madhu Priya 🎂❤️
-
-</h1>
-
-<p>
-
-Thank you for reading this little journey.
-
-This website was made especially for you.
-
-I hope today becomes one of your happiest memories.
-
-Stay blessed.
-
-Stay happy.
-
-Keep smiling.
-
-❤️ I Love You ❤️
-
-Forever Yours,
-
-(Hubby)
-
-</p>
 
 <button id="restart">
 
-Replay Journey 🔄
+🔄 Replay Story
 
 </button>
+
+
+
+</div>
+
+
 
 </section>
 
@@ -635,50 +747,25 @@ Replay Journey 🔄
 
 
 </div>
-
-
-
-
-
-
-<!-- ================= FINAL PAGE ================= -->
-
-
-<div class="page finalPage" id="finalPage">
-
-
-<h1>
-I LOVE YOU
-</h1>
-
-
-<h2>
-KODIGUDDU ❤️
-</h2>
-
-
-<button id="restart">
-
-Replay Our Story 🔄
-
-</button>
-
-
-</div>
-
+<!-- chapterBook END -->
 
 
 
 </div>
+<!-- website END -->
+
 
 
 </div>
+<!-- book END -->
 
 
 
-<script src="script.js"></script>
+
+
+<script src="Script.js"></script>
 
 
 </body>
 
-    </html>
+</html>
