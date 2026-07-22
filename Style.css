@@ -741,7 +741,7 @@ transform:scale(1);
     color:white;
     font-size:22px;
     line-height:1.8;
-    text-shadow:0 0 10px black;
+    text-shadow:0 0 05px black ;
 }
 .card,
 .card h3,
