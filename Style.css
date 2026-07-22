@@ -1,17 +1,19 @@
 /* =====================================
-   PART 2.1
-   REALISTIC BOOK FOUNDATION
+ PREMIUM BIRTHDAY BOOK WEBSITE V4
+
+ CSS PART 1
+ BOOK + PASSWORD SCREEN
+
 ===================================== */
 
 
-/* Reset */
-
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
+
 
 
 body{
@@ -19,35 +21,33 @@ body{
     min-height:100vh;
 
     background:
-    radial-gradient(circle at top,
-    #36466b,
-    #080b18 70%);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+    radial-gradient(circle at top,#28345f,#080b18 70%);
 
     overflow-x:hidden;
+
+    color:white;
 
 }
 
 
 
-/* Main Book Area */
 
-.bookScene{
 
-    width:100%;
+/* =========================
+ BOOK MAIN
+========================= */
 
-    min-height:100vh;
 
-    display:flex;
+.book{
 
-    justify-content:center;
+    width:90%;
+    max-width:1100px;
 
-    align-items:center;
+    min-height:650px;
+
+    margin:40px auto;
+
+    position:relative;
 
     perspective:2000px;
 
@@ -55,202 +55,372 @@ body{
 
 
 
-/* Book */
 
-.book{
 
-    position:relative;
+/* BOOK COVER */
 
-    width:900px;
+.book-cover{
 
-    height:600px;
+    position:absolute;
 
-    transform-style:preserve-3d;
+    width:100%;
+    height:100%;
 
-    transition:2s ease;
+    background:
+    linear-gradient(135deg,#5b2c15,#b87333);
+
+    border-radius:15px;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.8);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    z-index:5;
 
 }
 
 
 
-/* Book Cover */
+.book-cover img{
 
-.bookCover{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.8;
+
+}
+
+
+
+.cover-title{
 
     position:absolute;
 
-    inset:0;
+    font-size:45px;
 
-    background:
+    font-weight:700;
 
-    linear-gradient(
-    135deg,
-    #3b1d0b,
-    #8b5428,
-    #2b1205
-    );
+    color:white;
 
+    text-shadow:
+    0 5px 20px black;
 
-    border-radius:15px;
+}
 
 
-    border:10px solid #c89b3c;
 
 
-    box-shadow:
 
-    0 40px 80px rgba(0,0,0,.8),
 
-    inset 0 0 30px rgba(255,215,120,.4);
+
+/* =========================
+ PASSWORD PAGE
+========================= */
+
+
+.passwordPage{
+
+
+    width:100%;
+    min-height:650px;
 
 
     display:flex;
 
-    flex-direction:column;
 
-    justify-content:center;
-
-    align-items:center;
-
-
-    color:#ffe9a6;
-
-
-    z-index:10;
-
-
-    backface-visibility:hidden;
-
-}
-
-
-
-
-.bookCover h1{
-
-    font-size:55px;
-
-    letter-spacing:3px;
-
-    text-shadow:
-
-    0 5px 15px black;
-
-}
-
-
-
-.bookCover h2{
-
-    margin-top:20px;
-
-    font-size:35px;
-
-}
-
-
-
-
-
-#openBook{
-
-
-    margin-top:50px;
-
-
-    padding:15px 40px;
-
-
-    border-radius:40px;
-
-
-    border:none;
-
-
-    cursor:pointer;
-
-
-    font-size:18px;
-
-
-    background:#ffd86b;
-
-
-    color:#4a2500;
-
-
-    box-shadow:
-
-    0 10px 30px rgba(0,0,0,.5);
-
-
-    transition:.4s;
-
-
-}
-
-
-
-#openBook:hover{
-
-
-    transform:scale(1.1);
-
-
-}
-
-
-
-
-
-/* Generic Page */
-
-.page{
-
-
-    position:absolute;
-
-
-    inset:0;
-
-
-    background:
-
-    linear-gradient(
-    90deg,
-    #fff8e8,
-    #f2dfbd
-    );
+    background:#f8e8c8;
 
 
     border-radius:15px;
-
-
-    box-shadow:
-
-    0 30px 70px rgba(0,0,0,.5);
 
 
     overflow:hidden;
 
 
-    display:none;
+    box-shadow:
+    0 30px 80px black;
+
 
 
 }
 
 
 
-/* Paper effect */
+
+/* LEFT PHOTO PAGE */
 
 
-.page::before{
+.leftPage{
+
+    width:50%;
+
+    background:#fff5df;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:25px;
+
+}
 
 
-    content:"";
 
 
-    position:absolute;
+.memoryImage{
+
+
+    width:100%;
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    border-radius:10px;
+
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.4);
+
+}
+
+
+
+
+
+
+/* RIGHT PASSWORD PAGE */
+
+
+.rightPage{
+
+
+    width:50%;
+
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #fff8e7,
+    #f1d7a5
+    );
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+}
+
+
+
+
+
+.password-box{
+
+
+    width:80%;
+
+
+    padding:40px;
+
+
+    text-align:center;
+
+
+    color:#5b3215;
+
+
+    background:
+
+    rgba(255,255,255,.55);
+
+
+    border-radius:20px;
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.25);
+
+
+}
+
+
+
+
+.password-box h1{
+
+
+    font-size:32px;
+
+
+    margin-bottom:20px;
+
+
+    color:#8b4513;
+
+
+}
+
+
+
+
+.password-box p{
+
+
+    color:#5b3215;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+.password-box input{
+
+
+    width:100%;
+
+
+    padding:15px;
+
+
+    margin:20px 0;
+
+
+    border-radius:30px;
+
+
+    border:2px solid #b87333;
+
+
+    outline:none;
+
+
+    font-size:18px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.password-box button{
+
+
+    padding:15px 30px;
+
+
+    border:none;
+
+
+    border-radius:30px;
+
+
+    cursor:pointer;
+
+
+    background:
+
+    linear-gradient(
+    45deg,
+    #ff4d88,
+    #ff1493
+    );
+
+
+    color:white;
+
+
+    font-size:18px;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+#errorMsg{
+
+    margin-top:15px;
+
+    color:red;
+
+}
+
+
+
+
+
+#roseHint{
+
+
+    display:none;
+
+
+    margin-top:20px;
+
+
+    color:#8b4513;
+
+
+    font-weight:bold;
+
+
+}
+/* =====================================
+   CSS PART 2
+
+   LOADING
+   WELCOME
+   CHAPTER PAGES
+
+===================================== */
+
+
+
+
+
+/* =========================
+ LOADING SCREEN
+========================= */
+
+
+.loadingPage{
+
+
+    display:none;
+
+
+    position:fixed;
 
 
     inset:0;
@@ -258,363 +428,84 @@ body{
 
     background:
 
-    radial-gradient(
-    rgba(80,40,10,.12) 1px,
-    transparent 1px
-    );
+    radial-gradient(circle,#27345f,#050711);
 
 
-    background-size:25px 25px;
+    z-index:9999;
 
 
-    opacity:.3;
-
-
-    pointer-events:none;
-
-
-}
-
-
-
-
-
-/* Book Spine */
-
-
-.book::after{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    top:0;
-
-
-    bottom:0;
-
-
-    left:50%;
-
-
-    width:8px;
-
-
-    transform:translateX(-50%);
-
-
-    background:
-
-    linear-gradient(
-    90deg,
-    #4b270e,
-    #d5a45b,
-    #4b270e
-    );
-
-
-    z-index:20;
-
-
-}
-
-
-
-
-
-
-/* Page opening animation */
-
-.openAnimation{
-
-
-    animation:
-
-    openBook 2s forwards;
-
-}
-
-
-
-
-@keyframes openBook{
-
-
-    from{
-
-        transform:
-
-        rotateY(0deg);
-
-    }
-
-
-    to{
-
-        transform:
-
-        rotateY(-180deg);
-
-    }
-
-
-}
-
-
-
-
-
-
-/* Responsive */
-
-@media(max-width:900px){
-
-
-.book{
-
-    width:95vw;
-
-    height:70vh;
-
-}
-
-
-.bookCover h1{
-
-    font-size:35px;
-
-}
-
-
-.bookCover h2{
-
-    font-size:24px;
-
-}
-
-
-   }
-/* =====================================
-   PART 2.2
-   PASSWORD PAGE
-===================================== */
-
-.passwordPage{
-    display:flex;
-    flex-direction:row;
-    background:#f9f1df;
-}
-
-/* Left Page */
-
-.leftPage{
-    width:50%;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#fffdf7,#f5e9d0);
-    border-right:2px solid #d2b48c;
-}
 
-.leftPage img{
-    width:85%;
-    max-height:430px;
-    object-fit:cover;
-    border-radius:15px;
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
-    transition:.5s;
-}
 
-.leftPage img:hover{
-    transform:scale(1.03);
-}
-
-.leftPage p{
-    margin-top:20px;
-    font-size:20px;
-    font-weight:600;
-    color:#5a3820;
-    text-align:center;
-    padding:0 20px;
-}
-
-/* Right Page */
-
-.rightPage{
-    width:50%;
-    display:flex;
-    flex-direction:column;
     justify-content:center;
-    align-items:center;
-    padding:40px;
-    background:linear-gradient(135deg,#fff8ec,#f4e2c1);
-}
 
-.rightPage h1{
-    font-size:36px;
-    color:#5b2d08;
-    margin-bottom:15px;
-}
 
-.rightPage p{
-    font-size:18px;
-    color:#444;
-    margin-bottom:18px;
-}
+    flex-direction:column;
 
-#passwordInput{
-    width:300px;
-    padding:15px;
-    font-size:18px;
-    border:2px solid #b88746;
-    border-radius:12px;
-    outline:none;
-    text-align:center;
-    background:white;
-    color:#222;
-    transition:.3s;
-}
 
-#passwordInput:focus{
-    border-color:#ff69b4;
-    box-shadow:0 0 15px rgba(255,105,180,.35);
-}
-
-#unlockBtn{
-    margin-top:20px;
-    padding:14px 40px;
-    border:none;
-    border-radius:40px;
-    background:linear-gradient(45deg,#ff5f9e,#ff85b8);
     color:white;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
+
+
 }
 
-#unlockBtn:hover{
-    transform:translateY(-3px) scale(1.05);
-    box-shadow:0 10px 25px rgba(255,105,180,.45);
-}
-
-#errorMsg{
-    margin-top:18px;
-    color:#d60000;
-    font-weight:700;
-    min-height:24px;
-}
-
-#roseHint{
-    display:none;
-    margin-top:25px;
-    text-align:center;
-    color:#5b2d08;
-    font-size:18px;
-    animation:fadeIn .8s ease;
-}
-
-#roseHint::before{
-    content:"🌹";
-    display:block;
-    font-size:50px;
-    margin-bottom:10px;
-    animation:roseFloat 2s ease-in-out infinite;
-}
-
-@keyframes roseFloat{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
-    100%{transform:translateY(0);}
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(15px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-   }
-/* =====================================
-   PART 2.3
-   LOADING PAGE + WELCOME PAGE
-===================================== */
-
-
-/* ================= LOADING PAGE ================= */
-
-.loadingPage{
-
-    display:none;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    background:
-
-    linear-gradient(
-    135deg,
-    #fff8e8,
-    #ead2a8
-    );
-
-}
 
 
 .loadingPage h1{
 
-    font-size:45px;
 
-    color:#5b2d08;
+    font-size:42px;
 
-    margin-bottom:25px;
 
-    animation:pulseText 2s infinite;
+    text-shadow:
+    0 0 20px #ff69b4;
+
+
+    animation:pulse 2s infinite;
+
 
 }
+
+
 
 
 #loadingText{
 
-    font-size:22px;
 
-    color:#6b4325;
+    margin-top:20px;
 
-    margin-bottom:35px;
+
+    font-size:20px;
+
+
+    color:#ffd6e7;
+
 
 }
+
+
 
 
 
 .loadingBar{
 
-    width:70%;
 
-    max-width:500px;
+    width:350px;
 
-    height:18px;
 
-    background:#d8c09a;
+    height:15px;
 
-    border-radius:30px;
+
+    margin-top:30px;
+
+
+    background:#333;
+
+
+    border-radius:20px;
+
 
     overflow:hidden;
 
-    box-shadow:
-
-    inset 0 0 10px rgba(0,0,0,.3);
 
 }
 
@@ -622,517 +513,445 @@ body{
 
 #loadingFill{
 
-    width:0%;
 
     height:100%;
+
+
+    width:0;
+
 
     background:
 
     linear-gradient(
     90deg,
-    #ff5f9e,
-    #ffd166
+    #ff1493,
+    #ffd700
     );
 
-    border-radius:30px;
 
-    transition:width .5s ease;
+    animation:
+
+    loading 7s linear forwards;
+
 
 }
 
 
 
-@keyframes pulseText{
 
-    0%{
+@keyframes loading{
 
-        transform:scale(1);
 
-    }
+from{
 
-    50%{
+width:0;
 
-        transform:scale(1.05);
+}
 
-    }
+to{
 
-    100%{
+width:100%;
 
-        transform:scale(1);
-
-    }
+}
 
 }
 
 
 
-/* ================= WELCOME PAGE ================= */
 
 
-.welcomePage{
+@keyframes pulse{
+
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+ WELCOME PAGE
+========================= */
+
+
+#welcome{
+
 
     display:none;
 
-    flex-direction:column;
 
-    justify-content:center;
+    min-height:100vh;
+
 
     align-items:center;
 
-    text-align:center;
+
+    justify-content:center;
+
+
+    background:
+
+
+    linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.65)
+    ),
+
+    url("ghibli-photo.jpg");
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+}
+
+
+
+
+
+.welcome-box{
+
+
+    width:90%;
+
+
+    max-width:600px;
+
 
     padding:50px;
 
+
+    text-align:center;
+
+
+    background:
+
+    rgba(0,0,0,.55);
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 20px 60px black;
+
+
 }
 
 
 
-.welcomePage h1{
 
-    font-size:50px;
+.welcome-box h1{
 
-    color:#8b3a62;
+
+    color:#fff;
+
+
+    font-size:45px;
+
 
     text-shadow:
 
-    0 3px 10px rgba(0,0,0,.2);
+    0 5px 15px black;
 
-    margin-bottom:15px;
 
 }
 
 
 
-.welcomePage h2{
+
+.welcome-box h2{
+
+
+    color:#ff9acb;
+
 
     font-size:38px;
 
-    color:#b12c62;
 
-    margin-bottom:30px;
+    margin:15px 0;
+
 
 }
 
 
 
-.welcomePage p{
 
-    max-width:650px;
 
-    font-size:22px;
+.welcome-box p{
 
-    line-height:1.8;
 
-    color:#4a2a16;
+    color:white;
 
-    font-weight:500;
+
+    font-size:20px;
+
+
+    line-height:1.6;
+
 
 }
+
+
+
 
 
 
 #startBtn{
 
-    margin-top:40px;
 
-    padding:16px 45px;
+    margin-top:30px;
+
+
+    padding:16px 40px;
+
 
     border:none;
 
-    border-radius:50px;
 
-    cursor:pointer;
-
-    font-size:20px;
-
-    color:white;
+    border-radius:40px;
 
 
     background:
 
     linear-gradient(
     45deg,
-    #ff4f9a,
-    #ff8fab
+    #ff1493,
+    #ff69b4
     );
 
 
-    box-shadow:
+    color:white;
 
-    0 15px 30px rgba(255,80,150,.35);
-
-
-    transition:.4s;
-
-}
-
-
-
-#startBtn:hover{
-
-    transform:
-
-    scale(1.08)
-    translateY(-5px);
-
-}
-
-
-
-/* Small floating hearts on welcome */
-
-.welcomePage::after{
-
-    content:"❤️  ✨  💕  ✨  ❤️";
-
-    position:absolute;
-
-    bottom:50px;
-
-    font-size:30px;
-
-    opacity:.5;
-
-    animation:
-    floatHearts 4s infinite;
-
-}
-
-
-
-@keyframes floatHearts{
-
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-
-    50%{
-
-        transform:translateY(-20px);
-
-    }
-
-
-    100%{
-
-        transform:translateY(0);
-
-    }
-
-}
-
-
-
-
-/* Mobile */
-
-@media(max-width:700px){
-
-    .welcomePage h1{
-
-        font-size:32px;
-
-    }
-
-
-    .welcomePage h2{
-
-        font-size:26px;
-
-    }
-
-
-    .welcomePage p{
-
-        font-size:17px;
-
-    }
-
-
-    .loadingPage h1{
-
-        font-size:30px;
-
-    }
-
-   }
-/* =====================================
-   PART 2.4
-   CHAPTER BOOK PAGES
-===================================== */
-
-
-/* Main website inside book */
-
-#website{
-
-    display:none;
-
-    width:100%;
-
-    height:100%;
-
-}
-
-
-
-/* Progress text */
-
-#progress{
-
-    position:absolute;
-
-    top:20px;
-
-    right:30px;
-
-    z-index:20;
-
-    padding:8px 20px;
-
-    border-radius:20px;
-
-    background:rgba(91,45,8,.85);
-
-    color:#fff4d6;
-
-    font-size:15px;
-
-}
-
-
-
-
-
-/* Each chapter = book page */
-
-.chapter{
-
-    display:none;
-
-    position:absolute;
-
-    inset:0;
-
-    padding:55px;
-
-    overflow-y:auto;
-
-    background:
-
-    linear-gradient(
-    90deg,
-    #fffdf4,
-    #f3dfbd
-    );
-
-
-    color:#3b2415;
-
-}
-
-
-
-
-/* Active chapter */
-
-.chapter.active{
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    animation:
-
-    pageAppear 1s ease;
-
-}
-
-
-
-
-@keyframes pageAppear{
-
-    from{
-
-        opacity:0;
-
-        transform:
-
-        rotateY(-35deg);
-
-    }
-
-
-    to{
-
-        opacity:1;
-
-        transform:
-
-        rotateY(0deg);
-
-    }
-
-}
-
-
-
-
-/* Chapter heading */
-
-
-.chapter h1{
-
-    position:relative;
-
-    z-index:2;
-
-    font-size:45px;
-
-    color:#7b2d52;
-
-    text-align:center;
-
-    margin-bottom:20px;
-
-    text-shadow:
-
-    0 3px 8px rgba(0,0,0,.15);
-
-}
-
-
-
-.chapter h2{
-
-    position:relative;
-
-    z-index:2;
-
-    font-size:32px;
-
-    color:#a33b63;
-
-    text-align:center;
-
-    margin-bottom:25px;
-
-}
-
-
-
-
-
-/* All chapter paragraphs */
-
-.chapter p{
-
-    position:relative;
-
-    z-index:2;
-
-    max-width:750px;
-
-    text-align:center;
 
     font-size:20px;
 
-    line-height:1.8;
-
-    color:#3d2617;
-
-    font-weight:500;
-
-}
-
-
-
-
-
-/* Chapter images */
-
-.chapter img{
-
-    position:relative;
-
-    z-index:2;
-
-    max-width:75%;
-
-    max-height:350px;
-
-    object-fit:cover;
-
-    border-radius:18px;
-
-
-    margin:25px;
-
-
-    box-shadow:
-
-    0 20px 40px rgba(0,0,0,.3);
-
-
-    transition:.5s;
-
-}
-
-
-
-.chapter img:hover{
-
-    transform:scale(1.05);
-
-}
-
-
-
-
-/* Navigation area */
-
-
-.navButtons{
-
-    position:relative;
-
-    z-index:5;
-
-    margin-top:35px;
-
-    display:flex;
-
-    gap:20px;
-
-}
-
-
-
-
-.prevBtn,
-.nextBtn{
-
-    padding:14px 35px;
-
-    border:none;
-
-    border-radius:35px;
 
     cursor:pointer;
 
 
-    font-size:17px;
+}
 
 
-    color:white;
+
+
+
+
+
+/* =========================
+ CHAPTER BOOK PAGES
+========================= */
+
+
+
+#website{
+
+
+    display:none;
+
+
+}
+
+
+
+
+
+#chapterBook{
+
+
+    width:90%;
+
+
+    max-width:1000px;
+
+
+    margin:40px auto;
+
+
+}
+
+
+
+
+
+.chapter{
+
+
+    display:none;
+
+
+    min-height:600px;
+
+
+    padding:60px;
+
+
+    background:
+
+
+    linear-gradient(
+    90deg,
+    #fff7df,
+    #f4dfb5
+    );
+
+
+    border-radius:15px;
+
+
+    box-shadow:
+
+    0 25px 60px black;
+
+
+    color:#4b260e;
+
+
+    transform-origin:left;
+
+
+}
+
+
+
+
+
+
+.chapter.active{
+
+
+    display:flex;
+
+
+    animation:
+
+    pageOpen 1s ease;
+
+
+}
+
+
+
+
+
+@keyframes pageOpen{
+
+
+from{
+
+
+transform:
+
+rotateY(-90deg);
+
+
+opacity:0;
+
+
+}
+
+
+to{
+
+
+transform:
+
+rotateY(0);
+
+
+opacity:1;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+.page-content{
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.page-content h1{
+
+
+    font-size:45px;
+
+
+    color:#8b4513;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+.page-content p{
+
+
+    font-size:22px;
+
+
+    line-height:1.8;
+
+
+    color:#4b260e;
+
+
+}
+
+
+
+
+
+
+.nextBtn,
+.prevBtn,
+#musicBtn,
+#finishBtn{
+
+
+    margin:20px;
+
+
+    padding:14px 30px;
+
+
+    border:none;
+
+
+    border-radius:30px;
 
 
     background:
@@ -1140,229 +959,80 @@ body{
     linear-gradient(
     45deg,
     #8b4513,
-    #c07a3e
+    #d2691e
     );
 
 
-    box-shadow:
-
-    0 10px 25px rgba(0,0,0,.3);
+    color:white;
 
 
-    transition:.3s;
-
-}
+    cursor:pointer;
 
 
+    font-size:18px;
 
 
-.prevBtn:hover,
-.nextBtn:hover{
-
-    transform:
-
-    translateY(-4px)
-    scale(1.05);
-
-}
-
-
-
-
-
-/* Chapter paper edge */
-
-.chapter::after{
-
-    content:"";
-
-    position:absolute;
-
-    right:0;
-
-    top:0;
-
-    height:100%;
-
-    width:25px;
-
-
-    background:
-
-    linear-gradient(
-    90deg,
-    transparent,
-    rgba(0,0,0,.12)
-    );
-
-}
-
-
-
-/* Mobile chapter */
-
-@media(max-width:700px){
-
-
-.chapter{
-
-    padding:30px 20px;
-
-}
-
-
-.chapter h1{
-
-    font-size:32px;
-
-}
-
-
-.chapter h2{
-
-    font-size:24px;
-
-}
-
-
-.chapter p{
-
-    font-size:16px;
-
-}
-
-
-.chapter img{
-
-    max-width:90%;
-
-}
-
-}
+   }
 /* =====================================
-   PART 2.5
-   BOOK OPENING + PAGE TURN ANIMATION
+   CSS PART 3
+
+   FINAL PAGE
+   BOOK EFFECTS
+   MOBILE DESIGN
+
 ===================================== */
 
 
-/* Book starts closed */
 
-.book.closed .bookCover{
 
-    transform-origin:left center;
 
-    transform:rotateY(0deg);
+/* =========================
+ BOOK REALISTIC EFFECT
+========================= */
 
-}
 
+.book::before{
 
 
-/* Open book animation */
+content:"";
 
-.book.open .bookCover{
 
-    animation:
+position:absolute;
 
-    coverOpen 2s forwards;
 
-}
+left:50%;
 
 
+top:0;
 
-@keyframes coverOpen{
 
+height:100%;
 
-    0%{
 
-        transform:
+width:8px;
 
-        rotateY(0deg);
 
-    }
+background:
 
 
-    100%{
+linear-gradient(
+90deg,
+#5a3518,
+#d8a15d,
+#5a3518
+);
 
-        transform:
 
-        rotateY(-160deg);
+transform:translateX(-50%);
 
-    }
 
-}
+z-index:20;
 
 
+box-shadow:
 
+0 0 20px black;
 
-/* Hide cover after opening */
-
-.book.open .bookCover{
-
-    pointer-events:none;
-
-}
-
-
-
-
-
-/* Page turning effect */
-
-
-.pageTurnForward{
-
-    animation:
-
-    turnForward 1.2s ease forwards;
-
-}
-
-
-
-.pageTurnBack{
-
-    animation:
-
-    turnBack 1.2s ease forwards;
-
-}
-
-
-
-@keyframes turnForward{
-
-
-    0%{
-
-        transform:
-
-        rotateY(0deg);
-
-        opacity:1;
-
-    }
-
-
-    50%{
-
-        transform:
-
-        rotateY(-90deg);
-
-        opacity:.5;
-
-    }
-
-
-    100%{
-
-        transform:
-
-        rotateY(-180deg);
-
-        opacity:0;
-
-    }
 
 }
 
@@ -1370,503 +1040,519 @@ body{
 
 
 
-@keyframes turnBack{
 
-
-    0%{
-
-        transform:
-
-        rotateY(-180deg);
-
-        opacity:0;
-
-    }
-
-
-    50%{
-
-        transform:
-
-        rotateY(-90deg);
-
-        opacity:.5;
-
-    }
-
-
-    100%{
-
-        transform:
-
-        rotateY(0deg);
-
-        opacity:1;
-
-    }
-
-}
-
-
-
-
-/* Current page shadow */
-
-.chapter.active{
-
-
-    box-shadow:
-
-    inset -40px 0 50px rgba(0,0,0,.12),
-
-    inset 40px 0 50px rgba(255,255,255,.4);
-
-}
-
-
-
-
-/* Paper turning edge */
-
-.chapter.active::before{
-
-
-    animation:
-
-    paperGlow 2s ease;
-
-
-}
-
-
-
-@keyframes paperGlow{
-
-
-    from{
-
-        opacity:.1;
-
-    }
-
-
-    50%{
-
-        opacity:.35;
-
-    }
-
-
-    to{
-
-        opacity:.15;
-
-    }
-
-}
-
-
-
-
-
-/* Password page opening */
-
-.passwordPage.opening{
-
-
-    animation:
-
-    firstPageOpen 1.5s ease forwards;
-
-
-}
-
-
-
-@keyframes firstPageOpen{
-
-
-    from{
-
-        transform:
-
-        rotateY(0deg);
-
-    }
-
-
-    to{
-
-        transform:
-
-        rotateY(-180deg);
-
-    }
-
-}
-
-
-
-
-
-/* Final book closing */
 
 .book.close{
 
 
-    animation:
+animation:
 
-    closeBook 2s forwards;
+closeBook 2s forwards;
 
 
 }
+
+
 
 
 
 @keyframes closeBook{
 
 
-    0%{
+0%{
 
-        transform:
+transform:
 
-        rotateY(0deg);
+rotateY(0);
 
-    }
+}
 
 
-    100%{
+100%{
 
-        transform:
+transform:
 
-        rotateY(0deg)
-        scale(.8);
+rotateY(-70deg)
+scale(.8);
 
-    }
+
+opacity:.5;
+
+
+}
 
 }
 
 
 
 
-/* Smooth transitions */
-
-.page,
-.chapter,
-.bookCover{
-
-    backface-visibility:hidden;
-
-    transform-style:preserve-3d;
-
-}
 
 
 
-/* Mobile adjustment */
+/* =========================
+ FINAL PAGE
+========================= */
 
-@media(max-width:700px){
-
-
-.book.open .bookCover{
-
-    animation:none;
-
-}
-
-
-.chapter.active{
-
-    animation:
-
-    fadePage .8s ease;
-
-}
-
-
-}
-
-
-@keyframes fadePage{
-
-    from{
-
-        opacity:0;
-
-    }
-
-    to{
-
-        opacity:1;
-
-    }
-
-   }
-/* =====================================
-   PART 2.6
-   FINAL PAGE + REPLAY + PREMIUM EFFECTS
-===================================== */
-
-/* Final Page */
 
 .finalPage{
 
-    display:none;
 
-    flex-direction:column;
+display:none;
 
-    justify-content:center;
 
-    align-items:center;
+min-height:650px;
 
-    text-align:center;
 
-    background:linear-gradient(135deg,#2b1205,#5b341b,#8b5428);
+background:
 
-    color:#ffe9a6;
+
+linear-gradient(
+135deg,
+#2b1055,
+#7597de
+);
+
+
+border-radius:20px;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+text-align:center;
+
+
+color:white;
+
+
+box-shadow:
+
+0 30px 80px black;
+
 
 }
 
 
-.finalPage h1{
 
-    font-size:70px;
 
-    letter-spacing:5px;
 
-    text-shadow:
-    0 5px 20px rgba(0,0,0,.6);
+.finalPage.active{
 
-    animation:glowText 2s infinite alternate;
+
+display:flex;
+
+
+animation:
+
+finalOpen 2s ease;
+
 
 }
 
 
-.finalPage h2{
 
-    margin-top:20px;
 
-    font-size:42px;
 
-    color:#ffd86b;
+
+@keyframes finalOpen{
+
+
+from{
+
+
+transform:
+
+rotateY(-90deg);
+
+
+opacity:0;
+
+
+}
+
+
+to{
+
+
+transform:
+
+rotateY(0);
+
+
+opacity:1;
+
 
 }
 
 
-.finalPage p{
+}
 
-    margin-top:30px;
 
-    font-size:22px;
 
-    color:#fff5d6;
 
-    max-width:700px;
 
-    line-height:1.8;
+
+
+.final-book-page{
+
+
+padding:50px;
+
 
 }
+
+
+
+
+
+#finalMessage{
+
+
+font-size:55px;
+
+
+font-weight:800;
+
+
+color:#fff;
+
+
+text-shadow:
+
+
+0 0 20px #ff69b4,
+0 0 40px #ff1493;
+
+
+animation:
+
+loveGlow 2s infinite;
+
+
+}
+
+
+
+
+
+
+@keyframes loveGlow{
+
+
+50%{
+
+
+transform:scale(1.08);
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+.final-book-page p{
+
+
+font-size:22px;
+
+
+margin:30px;
+
+
+color:#ffe6f2;
+
+
+}
+
+
+
+
+
+.closing-heart{
+
+
+font-size:80px;
+
+
+animation:
+
+heartBeat 1s infinite;
+
+
+}
+
+
+
+
+
+@keyframes heartBeat{
+
+
+50%{
+
+
+transform:scale(1.3);
+
+
+}
+
+
+}
+
+
+
+
+
+
 
 
 #restart{
 
-    margin-top:45px;
 
-    padding:16px 45px;
+margin-top:30px;
 
-    border:none;
 
-    border-radius:40px;
+padding:18px 45px;
 
-    font-size:20px;
 
-    cursor:pointer;
+border:none;
 
-    color:#4a2500;
 
-    background:#ffd86b;
+border-radius:50px;
 
-    transition:.4s;
+
+font-size:22px;
+
+
+cursor:pointer;
+
+
+background:
+
+linear-gradient(
+45deg,
+#ff1493,
+#ff69b4
+);
+
+
+color:white;
+
+
+box-shadow:
+
+0 10px 30px black;
+
 
 }
 
 
-#restart:hover{
 
-    transform:scale(1.08);
 
-    box-shadow:0 15px 35px rgba(255,216,107,.5);
+
+
+
+/* =========================
+ PROGRESS TEXT
+========================= */
+
+
+#progress{
+
+
+position:fixed;
+
+
+top:20px;
+
+
+right:20px;
+
+
+background:
+
+rgba(0,0,0,.5);
+
+
+padding:10px 20px;
+
+
+border-radius:30px;
+
+
+color:white;
+
+
+z-index:500;
+
 
 }
 
 
-/* Glowing title */
 
-@keyframes glowText{
 
-    from{
 
-        text-shadow:
-        0 0 10px #ffd86b,
-        0 0 20px #ffd86b;
 
-    }
 
-    to{
 
-        text-shadow:
-        0 0 25px #fff7b2,
-        0 0 45px #ffd86b;
+/* =========================
+ MOBILE VERSION
+========================= */
 
-    }
-
-}
-
-
-/* Floating Hearts */
-
-.floatingHeart{
-
-    position:fixed;
-
-    font-size:26px;
-
-    pointer-events:none;
-
-    animation:heartFloat 6s linear forwards;
-
-    z-index:9999;
-
-}
-
-@keyframes heartFloat{
-
-    0%{
-
-        transform:translateY(0) scale(.5);
-
-        opacity:0;
-
-    }
-
-    20%{
-
-        opacity:1;
-
-    }
-
-    100%{
-
-        transform:translateY(-120vh) scale(1.6);
-
-        opacity:0;
-
-    }
-
-}
-
-
-/* Sparkles */
-
-.sparkle{
-
-    position:fixed;
-
-    width:6px;
-
-    height:6px;
-
-    border-radius:50%;
-
-    background:white;
-
-    pointer-events:none;
-
-    animation:sparkle 1.8s linear forwards;
-
-}
-
-@keyframes sparkle{
-
-    from{
-
-        opacity:1;
-
-        transform:scale(1);
-
-    }
-
-    to{
-
-        opacity:0;
-
-        transform:scale(4);
-
-    }
-
-}
-
-
-/* Scrollbar */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:#8b5428;
-
-    border-radius:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#f6e7c8;
-
-}
-
-
-/* Selection */
-
-::selection{
-
-    background:#ff85b8;
-
-    color:white;
-
-}
-
-
-/* Responsive */
 
 @media(max-width:700px){
 
-.finalPage h1{
 
-    font-size:42px;
 
-}
+.book{
 
-.finalPage h2{
 
-    font-size:28px;
+width:95%;
 
-}
 
-.finalPage p{
+margin:20px auto;
 
-    font-size:17px;
 
 }
 
-#restart{
 
-    width:85%;
+
+
+.passwordPage{
+
+
+flex-direction:column;
+
 
 }
+
+
+
+.leftPage,
+.rightPage{
+
+
+width:100%;
+
+
+height:350px;
+
+
+}
+
+
+
+
+
+.password-box{
+
+
+padding:25px;
+
+
+}
+
+
+
+
+
+.cover-title{
+
+
+font-size:30px;
+
+
+}
+
+
+
+
+
+.welcome-box{
+
+
+padding:30px;
+
+
+}
+
+
+
+.welcome-box h1{
+
+
+font-size:32px;
+
+
+}
+
+
+.welcome-box h2{
+
+
+font-size:28px;
+
+
+}
+
+
+
+
+
+.chapter{
+
+
+padding:30px 20px;
+
+
+min-height:500px;
+
+
+}
+
+
+
+
+
+.page-content h1{
+
+
+font-size:32px;
+
+
+}
+
+
+
+
+.page-content p{
+
+
+font-size:18px;
+
+
+}
+
+
+
+
+#finalMessage{
+
+
+font-size:35px;
+
+
+}
+
+
 
 }
