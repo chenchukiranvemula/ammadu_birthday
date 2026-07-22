@@ -867,3 +867,164 @@ transform:scale(1);
     background:linear-gradient(90deg,#ff7eb3,#ff4d88);
     transition:width .4s linear;
 }
+/* ==================================
+   REAL BOOK DESIGN
+================================== */
+
+#website{
+    min-height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background:
+    radial-gradient(circle at top,#26345c,#050816);
+    padding:40px 15px;
+}
+
+
+.bookWrapper{
+    position:relative;
+    width:95%;
+    max-width:1100px;
+    perspective:2000px;
+}
+
+
+.bookBody{
+
+    position:relative;
+
+    background:#f8f0df;
+
+    min-height:650px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 30px 70px rgba(0,0,0,.6);
+
+    border:12px solid #5b341b;
+
+}
+
+
+/* Middle book line */
+
+.bookBody::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    bottom:0;
+
+    left:50%;
+
+    width:4px;
+
+    background:
+    linear-gradient(
+    to right,
+    rgba(0,0,0,.3),
+    rgba(255,255,255,.5),
+    rgba(0,0,0,.3)
+    );
+
+}
+
+
+/* Chapter pages */
+
+.chapter{
+
+    position:relative;
+
+    min-height:600px;
+
+    padding:50px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #fffaf0,
+    #f5ead7
+    );
+
+}
+
+
+/* Paper texture effect */
+
+.chapter::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.15;
+
+    background-image:
+    radial-gradient(#000 1px,transparent 1px);
+
+    background-size:25px 25px;
+
+    pointer-events:none;
+
+}
+
+
+/* Text readability */
+
+.chapter h1,
+.chapter h2,
+.chapter h3,
+.chapter p{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#3b2415;
+
+}
+
+
+/* Buttons */
+
+.nextBtn,
+.prevBtn{
+
+    position:relative;
+
+    z-index:5;
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#8b4513;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    margin:10px;
+
+}
+
+
+.nextBtn:hover,
+.prevBtn:hover{
+
+    transform:scale(1.08);
+
+   }
