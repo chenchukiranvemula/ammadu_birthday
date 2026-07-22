@@ -1597,3 +1597,20 @@ if(finalText){
 console.log(
 "❤️ V4 Script Part 4 Loaded Successfully"
 );
+// ==============================
+// FINAL BUTTON CONNECTION
+// ==============================
+
+const finishBtn =
+document.getElementById("finishBtn");
+
+
+if(finishBtn){
+
+    finishBtn.addEventListener("click",()=>{
+
+        openFinalPage();
+
+    });
+
+}
