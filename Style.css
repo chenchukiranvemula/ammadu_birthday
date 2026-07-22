@@ -773,3 +773,29 @@ transform:scale(1);
 
     z-index:0;
    }
+.bgTitle{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:140px;
+
+    font-weight:900;
+
+    letter-spacing:12px;
+
+    color:#000;
+
+    opacity:0.08;
+
+    text-transform:uppercase;
+
+    user-select:none;
+
+    pointer-events:none;
+
+    white-space:nowrap;
+        }
