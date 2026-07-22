@@ -814,3 +814,56 @@ transform:scale(1);
     transform-origin:left center;
     animation:pageOpen .8s ease;
 }
+/* ================= LOADING SCREEN ================= */
+
+#loadingScreen{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:99999;
+
+    background:linear-gradient(135deg,#f8efe6,#efe2d1);
+
+    justify-content:center;
+    align-items:center;
+}
+
+.loadingBook{
+    width:90%;
+    max-width:600px;
+    text-align:center;
+    padding:40px;
+
+    background:rgba(255,255,255,.85);
+
+    border-radius:20px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.loadingBook h1{
+    font-size:38px;
+    color:#5b2c06;
+    margin-bottom:20px;
+}
+
+.loadingBook p{
+    font-size:20px;
+    color:#444;
+    margin-bottom:25px;
+}
+
+.loadingBar{
+    width:100%;
+    height:14px;
+    background:#ddd;
+    border-radius:50px;
+    overflow:hidden;
+}
+
+#loadingFill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#ff7eb3,#ff4d88);
+    transition:width .4s linear;
+}
