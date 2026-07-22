@@ -751,3 +751,25 @@ transform:scale(1);
 .timeBox p{
     color:#ffffff !important;
    }
+#passwordScreen::before{
+    content:"♡";
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:450px;
+
+    color:#8f8f8f;
+
+    opacity:0.12;
+
+    font-family:cursive;
+
+    pointer-events:none;
+
+    z-index:0;
+   }
