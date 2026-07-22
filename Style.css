@@ -135,20 +135,22 @@ button:hover{
 
 .chapter h1{
     font-size:3rem;
-    color:#ffd7f4;
-    margin-bottom:15px;
+    color:#ffffff;
+    text-shadow:0 0 12px rgba(255,255,255,.7);
 }
 
 .chapter h2{
     font-size:2rem;
-    color:#ffc6ea;
-    margin-bottom:20px;
+    color:#ffe082;
+    text-shadow:0 0 10px rgba(255,224,130,.7);
 }
 
 .chapter p{
     max-width:850px;
-    font-size:18px;
-    line-height:1.8;
+    font-size:20px;
+    line-height:2;
+    color:#ffffff;
+    text-shadow:0 0 8px rgba(0,0,0,.9);
 }
 
 /* Progress */
@@ -699,154 +701,3 @@ transform:scale(1);
     50%{transform:translateY(-12px);}
     100%{transform:translateY(0);}
    }
-/* ===== CHAPTER 9 ===== */
-
-.proposalScene{
-
-position:relative;
-
-width:900px;
-
-height:450px;
-
-overflow:hidden;
-
-border-radius:25px;
-
-background:linear-gradient(#02112d,#052d6d,#081326);
-
-}
-
-.sea{
-
-position:absolute;
-
-bottom:0;
-
-width:100%;
-
-height:150px;
-
-background:linear-gradient(#0a4ea3,#032f68);
-
-}
-
-.waves{
-
-position:absolute;
-
-bottom:120px;
-
-width:200%;
-
-height:40px;
-
-background:repeating-radial-gradient(circle,#9be7ff 0 8px,transparent 9px 22px);
-
-animation:waveMove 5s linear infinite;
-
-opacity:.6;
-
-}
-
-@keyframes waveMove{
-
-from{transform:translateX(0);}
-
-to{transform:translateX(-300px);}
-
-}
-
-#boy,#girl{
-
-position:absolute;
-
-bottom:120px;
-
-font-size:70px;
-
-transition:2s;
-
-}
-
-#boy{
-
-left:120px;
-
-}
-
-#girl{
-
-right:120px;
-
-}
-
-#heart{
-
-position:absolute;
-
-font-size:60px;
-
-opacity:0;
-
-left:50%;
-
-top:120px;
-
-transform:translateX(-50%);
-
-   }
-/* Moon */
-.proposalScene .moon{
-    position:absolute;
-    top:40px;
-    right:60px;
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    background:#fff9c4;
-    box-shadow:0 0 40px #fff9c4,0 0 80px rgba(255,249,196,.6);
-}
-
-/* Stars */
-.proposalScene::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background-image:
-        radial-gradient(white 1px, transparent 1px),
-        radial-gradient(white 1px, transparent 1px);
-    background-size:80px 80px,120px 120px;
-    background-position:0 0,40px 40px;
-    opacity:.8;
-}
-
-/* Clouds */
-.proposalScene::after{
-    content:"☁ ☁ ☁";
-    position:absolute;
-    top:50px;
-    left:-250px;
-    font-size:45px;
-    color:rgba(255,255,255,.6);
-    animation:cloudMove 30s linear infinite;
-}
-
-@keyframes cloudMove{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(1300px);
-    }
-}
-
-/* Heart animation */
-#heart{
-    transition:1s;
-}
-
-#heart.show{
-    opacity:1;
-    transform:translateX(-50%) scale(1.4);
-}
